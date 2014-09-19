@@ -25,7 +25,7 @@ oauth_workshop
 ```
 > json = MultiJson.encode(name: "yuan")
 => "{\"name\":\"yuan\"}"
-irb(main):004:0> MultiJson.decode(json)
+> MultiJson.decode(json)
 => {"name"=>"yuan"}
 ```
 
@@ -46,6 +46,8 @@ connection = Faraday.new
 response = connection.post do |req|
   req.url "https://api.weibo.com/oauth2/access_token", client_id: "1234", client_secret: "abcd", grant_type: "authorization_code", code: "thecode", redirect_uri: "http://ws.mytw.org:3000/auth/callback/weibo"
 end
+
+access_token = MultiJson.decode(response.body)
 
 ```
 
