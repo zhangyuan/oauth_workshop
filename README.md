@@ -62,7 +62,7 @@ access_token = MultiJson.decode(response.body)
 
 ## Rspec
 
-1. Controller specs <https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs>
+1. Request spec <https://www.relishapp.com/rspec/rspec-rails/docs/request-specs/request-spec>
 
 ## Bundler
 
