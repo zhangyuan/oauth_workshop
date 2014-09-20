@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'dashboard#index'
+  get "/auth/connect/weibo" => "sessions#connect", as: "connect"
+  get "/auth/callback/weibo" => "sessions#callback", as: "callback"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
