@@ -34,6 +34,19 @@ oauth_workshop
 * <https://github.com/bblimke/webmock>
 * Library for stubbing and setting expectations on HTTP requests in Ruby.
 
+用法
+
+```ruby
+json =  {
+  access_token: "ACCESS_TOKEN",
+  expires_in: 1234,
+  remind_in:"798114",
+  uid:"12341234"
+}.to_json
+
+stub_request(:post, "https://api.weibo.com/oauth2/access_token?client_id=1234&client_secret=abcd&code=thecode&grant_type=authorization_code&redirect_uri=http://ws.mytw.org:3000/auth/callback/weibo").to_return(body: json)
+```
+
 ### faraday
 
 * <https://github.com/lostisland/faraday>
