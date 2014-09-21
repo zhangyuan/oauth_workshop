@@ -47,3 +47,5 @@ group :test do
 end
 
 gem 'faraday'
+
+gem 'weibo-auth_client', path: "weibo-auth_client/"

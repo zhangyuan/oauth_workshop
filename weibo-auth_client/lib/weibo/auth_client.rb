@@ -1,3 +1,5 @@
+require "weibo/auth_client/version"
+
 module Weibo
   class AuthClient
     def initialize(client_id, client_secret)
